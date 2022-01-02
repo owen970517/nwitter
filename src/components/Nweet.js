@@ -1,4 +1,4 @@
-import { dbService } from "../firebase";
+import { dbService, storageService } from "../firebase";
 import React from "react";
 import { useState } from "react/cjs/react.development";
 
@@ -10,6 +10,7 @@ const Nweet = ({nweetObj , isOwner}) => {
 
         if(permission) {
             await dbService.doc(`nweets/${nweetObj.id}`).delete();
+            await storageService.refFromURL(nweetObj.attachmentURL).delete();
         }
     }
     const toggleEditing = () => setEditing((prev) => !prev);
@@ -38,6 +39,7 @@ const Nweet = ({nweetObj , isOwner}) => {
                 </>
                 ) : (                <>
                 <h4>{nweetObj.text}</h4>
+                {nweetObj.attachmentURL && <img src={nweetObj.attachmentURL} width="100px" height = "100px"/>}
                 {isOwner && ( <>
                     <button onClick={onDeleteClick}>삭제</button>
                     <button onClick={toggleEditing}>수정</button>

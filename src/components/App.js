@@ -11,17 +11,30 @@ function App() {
     {
       if(user) {
         setIsLoggedIn(true);
-        setuserOb(user);
+        setuserOb({
+          displayName : user.displayName,
+          uid : user.uid,
+          updateProfile : (args) => user.updateProfile(args),
+        })
       } else {
         setIsLoggedIn(false);
+        setuserOb(null);
       }
       setInit(true);
     });
   },[])
+  const refreshUser = () => {
+    const user = authService.currentUser;
+    setuserOb({
+      displayName : user.displayName,
+      uid : user.uid,
+      updateProfile : (args) => user.updateProfile(args),
+    })
+  }
   return (
     <>
-    {init ? <AppRouter isLoggedIn={isLoggedIn} userOb = {userOb}/> : "Loggining..."}
-    <footer>&copy; {new Date().getFullYear()} Nwitter</footer>
+    {init ? <AppRouter refreshUser={refreshUser} isLoggedIn={isLoggedIn} userOb = {userOb}/> : "Loggining..."}
+    
     </>
   )
 }
