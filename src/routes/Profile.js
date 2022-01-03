@@ -2,6 +2,7 @@ import { authService, dbService } from "../firebase";
 import React, { useEffect } from "react";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { useState } from "react/cjs/react.development";
+import styles from "style.css";
 
 export default ({userOb , refreshUser})=> {
     const history = useHistory();
@@ -32,11 +33,12 @@ export default ({userOb , refreshUser})=> {
     };
     return (
         <>
-            <form onSubmit={onSubmit}>
-                <input type="text" placeholder = "name" onChange={onChange} value={newDisplayName}></input>
-                <input type="submit" value="수정"/>
+            <form onSubmit={onSubmit} className="ProfileForm">
+                <input className="ProfileName" type="text" placeholder = "name" onChange={onChange} value={newDisplayName}></input>
+                <input className = "ModifyProfile" type="submit" value="수정"/>
+                <hr/>
+                <button className="LogOutBtn" onClick={onLogOutClick}>Log Out</button>
             </form>
-            <button onClick={onLogOutClick}>Log Out</button>
         
         </>
     )

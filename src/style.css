@@ -120,7 +120,7 @@ button {
     flex-grow: 1;
     height: 40px;
     padding: 0px 20px;
-    color: white;
+    color: #000;
     border: 1px solid #04aaff;
     border-radius: 20px;
     font-weight: 500;
@@ -185,3 +185,27 @@ button {
   .nweet__actions span:first-child {
     margin-right: 10px;
   }
+.ProfileForm {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+}
+.ProfileName ,.ModifyProfile{
+    text-align: center;
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 30px;
+}
+.ModifyProfile {
+    margin-top: 20px;
+    background: #00acee;
+    color: #fff;
+}
+hr {
+    text-align: center;
+    margin : 30px;
+}
+.LogOutBtn {
+    background: red;
+    color: #fff;
+}
