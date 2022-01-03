@@ -46,10 +46,13 @@ const NweetFactory = ({userOb}) => {
         
     }
     return (
-        <form onSubmit={onSubmit}>
-        <input value={nweet} onChange={onChange} type="text" placeholder="qwe" maxLength={120}/>
-        <input type="file" accept="image/*" onChange={onFileChange}/>
-        <input type='submit' value='Nweet'/>
+        <form onSubmit={onSubmit} className="factoryForm">
+        <div className="factoryInput__container">
+            <input className="factoryInput__input" value={nweet} onChange={onChange} type="text" placeholder="내용을 적으시오" maxLength={120}/>
+            <input className="factoryInput__arrow" type='submit' value='&rarr;' />
+        </div>
+        <label className ="input-file-button" for ="file-input">사진 추가</label>
+        <input id = "file-input" type="file" accept="image/*" onChange={onFileChange} style={{display :"none"}} />
         {attachment && <div>
             <img src={attachment}  width="50px" height="50px"/>
             <button onClick={DeletePhoto} >지우기</button>

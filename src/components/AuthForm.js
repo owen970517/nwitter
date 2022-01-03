@@ -1,6 +1,7 @@
 import React from "react";
 import { authService} from "../firebase";
 import { useState } from "react";
+import styles from "style.css";
 
 const AuthForm = () => {
     const [email , setEmail] = useState("");
@@ -33,12 +34,12 @@ const AuthForm = () => {
     const toggleAccount = () => setNewAccount(prev => !prev);
     return (
         <>
-        <form onSubmit={onSubmit}>
-            <input name = "email" type="email" placeholder="email" required value={email} onChange={onChange}></input>
-            <input name = "password" type="password" placeholder="password" required value={password} onChange={onChange}></input>
-            <input type="submit" value={newAccount ? "Create Account" : "Sign in "}></input>
+        <form className="LoginForm" onSubmit={onSubmit}>
+            <input className="IdForm" name = "email" type="email" placeholder="E-mail" required value={email} onChange={onChange}></input>
+            <input className="PasswordForm" name = "password" type="password" placeholder="Password" required value={password} onChange={onChange}></input>
+            <input className="SubmitForm" type="submit" value={newAccount ? "Create Account" : "Sign in "}></input>
             {error}
-            <span onClick={toggleAccount}>{newAccount ? "Log in" : "Create Account"}</span>
+            <span className="toggleForm" onClick={toggleAccount}>{newAccount ? "Log in" : "Create Account"}</span>
         </form>
         </>
     )

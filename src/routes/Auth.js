@@ -1,6 +1,7 @@
 import { authService, firebaseInstance } from "../firebase";
 import React, { useEffect, useState } from "react";
 import AuthForm from "components/AuthForm";
+import styles from "style.css";
 
 const Auth = () => {
 
@@ -17,9 +18,9 @@ const Auth = () => {
         console.log(data);
     }
     return (
-    <div>
+    <div className="container">
         <AuthForm/>
-        <div>
+        <div className="SocialLogin">
             <button onClick={onSocialClick} name= "google">Google</button>
             <button onClick={onSocialClick} name = "github">GitHub</button>
         </div>

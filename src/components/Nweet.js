@@ -26,24 +26,29 @@ const Nweet = ({nweetObj , isOwner}) => {
         setNewText(value);
     }
     return (
-        <div>
+        <div className="nweets">
             {editing ? (
                 <>
                     {isOwner && ( <>
-                    <form onSubmit={onSubmit}>
-                        <input value={newtext} placeholder="Modify" required onChange={onModify} />
-                        <input type="submit" value="수정"/>
+                    <form onSubmit={onSubmit} className="container nweetEdit">
+                        <input value={newtext} placeholder="Modify" required onChange={onModify} className="formInput" />
+                        <input type="submit" value="수정" className="formBtn"/>
                     </form>
-                    <button onClick={toggleEditing}>취소</button>
+                    <button onClick={toggleEditing} className="formBtn cancelBtn">취소</button>
                     </>)}
                 </>
-                ) : (                <>
-                <h4>{nweetObj.text}</h4>
-                {nweetObj.attachmentURL && <img src={nweetObj.attachmentURL} width="100px" height = "100px"/>}
-                {isOwner && ( <>
-                    <button onClick={onDeleteClick}>삭제</button>
-                    <button onClick={toggleEditing}>수정</button>
-                </>) }
+                ) : ( <>
+                <div className="nweet">
+                    <h4>{nweetObj.text}</h4>
+                    {nweetObj.attachmentURL && <img src={nweetObj.attachmentURL} width="50px" height = "50px"/>}
+                    {isOwner && ( <>
+                        <div class="nweet__actions">
+                        <span onClick={onDeleteClick}>삭제</span>
+                        <span onClick={toggleEditing}>수정</span>
+                        </div>
+                    
+                    </>) }
+                </div>
                 </>)
             }
             

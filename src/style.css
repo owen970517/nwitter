@@ -1,0 +1,187 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+}
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.LoginForm {
+    display: flex;
+    flex-direction: column;
+    
+}
+.IdForm, .PasswordForm ,.SubmitForm{
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 20px;
+    margin: 10px 10px;
+}
+.SubmitForm {
+    background: #00acee;
+    color: #fff;
+}
+
+.toggleForm {
+    text-align: center;
+    color: #00acee;
+}
+.SocialLogin {
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+button {
+    border-radius: 20px;
+    padding: 10px;
+}
+.Nav {
+    padding: 10px;
+}
+.Nav ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.Nav ul li {
+    list-style: none;
+    margin-left: 30px;
+}
+.Nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+}
+.Nav ul li a:hover {
+    padding: 10px;
+    border-radius: 30px;
+    background: #00acee;
+}
+
+.nweets {
+    margin-bottom: 30px;
+}
+
+.contents {
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 30px;
+}
+
+.input-file-button {
+    display: block;
+    text-align: center;
+    line-height: 150%;
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer; 
+    color: #00acee;
+}
+.input-file-button:hover {
+    padding: 10px;
+    border-radius: 30px;
+    background: #00acee;
+    color: #fff;
+}
+.nweets {
+    background: #fff;
+    width: 300px;
+    height: 100px;
+    border-radius: 30px;
+}
+.factoryForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .factoryInput__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  
+  .factoryInput__input {
+    flex-grow: 1;
+    height: 40px;
+    padding: 0px 20px;
+    color: white;
+    border: 1px solid #04aaff;
+    border-radius: 20px;
+    font-weight: 500;
+    font-size: 12px;
+  }
+  
+  .factoryInput__arrow {
+    position: absolute;
+    right: 0;
+    background-color: #04aaff;
+    height: 40px;
+    width: 40px;
+    padding: 10px 0px;
+    text-align: center;
+    border-radius: 20px;
+    color: white;
+    box-sizing: border-box;
+  }
+.nweetEdit .formBtn {
+    cursor: pointer;
+    margin-top: 15px;
+    margin-bottom: 5px;
+  }
+  
+  .nweet {
+    margin-bottom: 20px;
+    background-color: white;
+    width: 100%;
+    max-width: 320px;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    color: rgba(0, 0, 0, 0.8);
+  }
+  
+  .nweet h4 {
+    font-size: 14px;
+  }
+  
+  .nweet img {
+    right: -10px;
+    top: 50px;
+    position: absolute;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-top: 10px;
+  }
+  
+  .nweet__actions {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
+  
+  .nweet__actions span {
+    cursor: pointer;
+  }
+  
+  .nweet__actions span:first-child {
+    margin-right: 10px;
+  }
