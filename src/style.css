@@ -68,9 +68,6 @@ button {
     background: #00acee;
 }
 
-.nweets {
-    margin-bottom: 30px;
-}
 
 .contents {
     padding: 10px;
@@ -86,6 +83,7 @@ button {
     color: #fff;
     cursor: pointer; 
     color: #00acee;
+    margin-bottom: 20px;
 }
 .input-file-button:hover {
     padding: 10px;
@@ -93,13 +91,7 @@ button {
     background: #00acee;
     color: #fff;
 }
-.nweets {
-    background: #fff;
-    width: 300px;
-    height: 100px;
-    border-radius: 30px;
-    margin-top: 30px;
-}
+
 .factoryForm {
     display: flex;
     flex-direction: column;
@@ -144,30 +136,48 @@ button {
   }
 .nweetEdit .formBtn {
     cursor: pointer;
-    margin-top: 15px;
-    margin-bottom: 5px;
+        width: 100px;
+        padding: 7px 20px;
+        text-align: center;
+        color: white;
+        border-radius: 20px;
+        background-color: #04aaff;
+        cursor: pointer;
   }
-  
-  .nweet {
-    margin-bottom: 20px;
+  .cancelBtn {
+    width: 100px;
+    cursor: pointer;
+    background-color: tomato;
+  }
+  .formInput {
+    width: 100%;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: 1px solid black;
+    text-align: center;
+    background-color: white;
+    color: black;
+  }
+  .nweets {
+    margin-bottom: 40px;
     background-color: white;
     width: 100%;
     max-width: 320px;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 20px;
     position: relative;
     display: flex;
     flex-direction: column;
     color: rgba(0, 0, 0, 0.8);
   }
   
-  .nweet h4 {
+  .nweets h4 {
     font-size: 14px;
   }
   
-  .nweet img {
+  .nweets img {
     right: -10px;
-    top: 50px;
+    top: 25px;
     position: absolute;
     border-radius: 50%;
     width: 50px;
@@ -211,4 +221,7 @@ hr {
 .LogOutBtn {
     background: red;
     color: #fff;
+}
+.previewImg {
+    margin-left: 50px;
 }

@@ -54,7 +54,7 @@ const NweetFactory = ({userOb}) => {
         <label className ="input-file-button" for ="file-input">사진 추가</label>
         <input id = "file-input" type="file" accept="image/*" onChange={onFileChange} style={{display :"none"}} />
         {attachment && <div>
-            <img src={attachment}  width="50px" height="50px"/>
+            <img src={attachment} className="previewImg" width="100px" height="100px"/>
             <button onClick={DeletePhoto} >지우기</button>
         </div> }
     </form>
