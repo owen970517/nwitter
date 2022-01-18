@@ -34,7 +34,7 @@ const Nweet = ({nweetObj , isOwner}) => {
                         <input value={newtext} placeholder="Modify" required onChange={onModify} className="formInput" />
                         <input type="submit" value="수정" className="formBtn"/>
                     </form>
-                    <button onClick={toggleEditing} className="formBtn cancelBtn">취소</button>
+                    <button onClick={toggleEditing} className=" cancelBtn">취소</button>
                     </>)}
                 </>
                 ) : ( <>
